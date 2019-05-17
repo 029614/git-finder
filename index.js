@@ -33,6 +33,7 @@ function displayResults(results) {
 function watchForm() {
   $('form').submit(event => {
     event.preventDefault();
+    $('.results li').remove();
     gitHandle = $("#gitHandle").val();
     console.log('watchForm declares username: ' + gitHandle);
     getUserInformation(gitHandle);
